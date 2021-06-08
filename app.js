@@ -1,20 +1,28 @@
-var express = require("express");
-var app = express();
+// Imports
+const express = require("express");
+const expressLayouts = require("express-ejs-layouts");
 
-// set the view engine to ejs
+const app = express();
+const port = 5000;
+
+// Static Files
+app.use(express.static("public"));
+// Example for other folders - not required
+// app.use('/css', express.static(__dirname + 'public/css'))
+
+// Set Templating Engine
+app.use(expressLayouts);
+//app.set("layout", "./layouts/full-width");
 app.set("view engine", "ejs");
 
-// use res.render to load up an ejs view file
-
-// index page
-app.get("/", function(req, res) {
-    res.render("pages/index");
+// Routes
+app.get("", (req, res) => {
+    res.render("index", { title: "Home Page" });
 });
 
-// about page
-app.get("/about", function(req, res) {
-    res.render("pages/about");
+app.get("/about", (req, res) => {
+    res.render("about", { title: "About Page", layout: "./layouts/sidebar" });
 });
 
-app.listen(8080);
-console.log("Server is listening on port 8080");
+// Listen on Port 5000
+app.listen(port, () => console.info(`App listening on port ${port}`));
