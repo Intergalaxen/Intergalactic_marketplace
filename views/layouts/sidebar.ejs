@@ -7,13 +7,15 @@
     <title>
         <%- title %>
     </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+    <%- include('../partials/navbar.ejs') %>
 
-    <div class="wrapper">
-        <%- include('../partials/header.ejs') %>
+        <div class="wrapper">
             <div class="layout-sidebar">
                 <main>
                     <%- body %>
@@ -21,7 +23,7 @@
                 <side>Sidebar</side>
             </div>
             <%- include('../partials/footer.ejs') %>
-    </div>
+        </div>
 
 </body>
 

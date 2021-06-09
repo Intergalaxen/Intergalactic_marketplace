@@ -8,6 +8,7 @@ const port = 5000;
 // Static Files
 app.use(express.static("public"));
 app.use("/css", express.static(__dirname + "public/css"));
+app.use("/js", express.static(__dirname + "public/js"));
 
 // Set Templating Engine
 app.use(expressLayouts);
@@ -17,6 +18,10 @@ app.set("view engine", "ejs");
 // Routes
 app.get("", (req, res) => {
     res.render("index", { title: "Home Page" });
+});
+
+app.get("/marketplace", (req, res) => {
+    res.render("marketplace", { title: "Marketplace" });
 });
 
 app.get("/about", (req, res) => {
