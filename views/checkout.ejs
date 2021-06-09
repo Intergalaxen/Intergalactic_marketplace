@@ -1,0 +1,55 @@
+<div class="main-page flex">
+    <!-- CHECKOUT FORM -->
+    <form name="checkout" method="post" class="myForm">
+        <div class="row">
+            <div class="column">
+                <div class="input-group">
+                    <label for="customer_name">Name </label>
+                    <input id="customer_name">
+                </div>
+                <div class="input-group">
+                    <label for="phone_number">Phone (For delivery updates)</label>
+                    <input type="tel" id="phone_number">
+                </div>
+                <div class="input-group">
+                    <label for="email_address">Email </label>
+                    <input type="email" id="email_address">
+                </div>
+                <div class="input-group">
+                    <label for="Country">Planet </label>
+                    <select id="country">
+              <option value="" selected="selected">Select One</option>
+              <option value="office" >Earth</option>
+              <option value="town_hall" >Some planet far away</option>
+              <option value="telepathy" >A close exo-planet</option>
+            </select>
+                </div>
+                <div class="input-group">
+                    <label for="dropoff_place">House number and street name</label>
+                    <input type="text" id="dropoff_place" list="destinations">
+                </div>
+                <fieldset class="extras">
+                    <legend>Extras</legend>
+                    <label> <input type="checkbox" id="special-offers" value="special-offers"> I would like to receive e-mails with special offers (optional) </label>
+                    <label> <input type="checkbox" id="create_account" value="wheelchair"> Teleport shipping </label>
+                </fieldset>
+            </div>
+            <div class="column">
+                <fieldset class="payment">
+                    <legend>Payment method</legend>
+                    <label> <input type="radio" name="payment_option" id="pay_pal" value="payment"><i class="fa fa-paypal" aria-hidden="true"></i> PayPal </label>
+                    <label> <input type="radio" name="payment_option" id="credit_card" value="payment"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Credit Card </label>
+                    <label> <input type="radio" name="payment_option" id="klarna" value="payment"><i class="fa fa-btc" aria-hidden="true"></i> Crypto coins </label>
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <button id="submit">Place order</button>
+        </div>
+    </form>
+    <!-- END OF CHECKOUT FORM -->
+    <div class="order-details">
+        <h2>Order details</h2>
+        <img src="img/marketplace-pic01.jpg" width="400px" alt="Picture of your order">
+    </div>
+</div>

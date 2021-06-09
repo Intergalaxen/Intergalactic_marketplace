@@ -83,12 +83,6 @@ h2 {
     /* transition-duration: 2s; */
 }
 
-
-/* .category-item-inner > div:hover {
-  transform: scale(1.02);
-  transition-duration: 800ms;
-} */
-
 .featured-products {
     margin-top: 20px;
     max-width: 1200px;
@@ -206,6 +200,93 @@ button {
 
 /* MARKETPLACE PAGE */
 
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    max-width: 100%;
+    margin-top: 12em;
+}
+
+@media (max-width: 1000px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.products-grid img {
+    width: 200px;
+    transition-duration: 900ms;
+    border-radius: 3px;
+    box-shadow: 0 0 10px #000000ee;
+}
+
+.products-grid img:hover {
+    transform: scale(1.03);
+    transition-duration: 200ms;
+}
+
+.marketplace .header {
+    text-align: center;
+    margin: -10em auto;
+    min-height: 30rem;
+    background: url('../images/categories/crystals.jpg') 75%;
+    background-size: cover;
+    background-position: center;
+}
+
+.header h1 {
+    padding-top: 5em;
+}
+
+.marketplace.item {
+    box-shadow: 0 0 5px rgba(5, 5, 5, 0.5);
+    border-radius: 3px;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    background: #eee;
+}
+
+
+/* ABOUT PAGE */
+
+.about-page {
+    background-color: #000000ee;
+    margin: 0 auto;
+    padding: 5%;
+    color: #f4f4f4;
+}
+
+.about-page .column {
+    width: 50%;
+}
+
+.about-page .row {
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+article div {
+    padding: 2rem 0;
+}
+
+.about-page img {
+    width: 100%;
+    min-width: 10rem;
+    margin: 0 auto;
+}
+
+
+/* MARKETPLACE PAGE */
+
 .marketplace .header {
     margin: 0 -5rem;
     min-height: 30rem;
@@ -213,7 +294,7 @@ button {
 }
 
 .mark-items .column {
-    display: grid;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
@@ -236,19 +317,269 @@ button {
 }
 
 
+/* CONTACT PAGE */
+
+
+/* Icon */
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+ul.icons li .icon:before {
+    font-size: 2em;
+}
+
+.icon:before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none !important;
+}
+
+.fa-twitter:before {
+    content: "\f099";
+}
+
+.icon {
+    text-decoration: none;
+    border-bottom: none;
+    position: relative;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.icons a:hover {
+    color: #000000ee;
+}
+
+.icon:before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none !important;
+}
+
+.icon>.label {
+    display: none;
+}
+
+
+/* CHECKOUT PAGE */
+
+.order-details {
+    flex-direction: column;
+    width: 30%;
+    margin: 2rem;
+}
+
+.order-details h2 {
+    margin: 5rem;
+    margin: 0 auto;
+    font-size: 2em;
+}
+
+
+/* FORMS */
+
+@media screen and (min-width: 900px) {
+    form {
+        width: 50%;
+    }
+    .myForm {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(110deg, rgba(207, 162, 233, 0.555) 0%, rgba(111, 136, 219, 0.555) 100%);
+        border-radius: 3px;
+        padding: 3rem;
+        margin: 3%;
+        margin-bottom: 100px;
+        text-align: left;
+    }
+    .row {
+        display: flex;
+        justify-content: center;
+        padding-right: 1em;
+        align-content: space-around;
+    }
+    .column {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+    .input-group {
+        display: flex;
+    }
+    .input-group>label {
+        margin-right: 1em;
+        padding: .5em 0;
+    }
+    .myForm input,
+    .myForm select {
+        flex: 6;
+        padding: .5em;
+        margin-bottom: 1em;
+        height: 2rem;
+    }
+    .myForm button {
+        padding: 1em;
+        background: linear-gradient(40deg, rgba(111, 155, 156, 0.459) 0%, rgba(207, 162, 233, 0.8) 100%);
+        color: white;
+        border: 0;
+        transition-duration: 700ms;
+    }
+    .myForm button:hover {
+        transform: scale(1.02);
+        transition-duration: 400ms;
+    }
+    .myForm fieldset {
+        border: 0;
+    }
+    .payment>label,
+    .extras>label {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    form {
+        width: 50%;
+    }
+    .myForm {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(110deg, rgba(207, 162, 233, 0.555) 0%, rgba(111, 136, 219, 0.555) 100%);
+        border-radius: 3px;
+        padding: 3rem;
+        margin: 3%;
+        margin-bottom: 100px;
+        text-align: left;
+    }
+    .row {
+        display: flex;
+        justify-content: center;
+        padding-right: 1em;
+        align-content: space-around;
+    }
+    .column {
+        display: block;
+        flex-direction: column;
+        padding: 1em;
+    }
+    .input-group {
+        display: flex;
+    }
+    .input-group>label {
+        margin-right: 1em;
+        padding: .5em 0;
+    }
+    .myForm input,
+    .myForm select {
+        flex: 6;
+        padding: .5em;
+        margin-bottom: 1em;
+        height: 2rem;
+    }
+    .myForm button {
+        padding: 1em;
+        background: linear-gradient(40deg, rgba(111, 155, 156, 0.459) 0%, rgba(207, 162, 233, 0.8) 100%);
+        color: white;
+        border: 0;
+        transition-duration: 700ms;
+    }
+    .myForm button:hover {
+        transform: scale(1.02);
+        transition-duration: 400ms;
+    }
+    .myForm fieldset {
+        border: 0;
+    }
+    .payment>label,
+    .extras>label {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    form {
+        width: 100%;
+    }
+    .myForm {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(110deg, rgba(207, 162, 233, 0.555) 0%, rgba(111, 136, 219, 0.555) 100%);
+        border-radius: 3px;
+        padding: 3rem;
+        margin: 3%;
+        margin-bottom: 100px;
+        text-align: left;
+    }
+    .row {
+        display: flex;
+        justify-content: left;
+        padding-right: 1em;
+    }
+    .column {
+        display: block;
+        flex-direction: column;
+        padding: 1em;
+    }
+    .input-group {
+        display: flex;
+    }
+    .input-group>label {
+        margin-right: 1em;
+        padding: .5em 0;
+    }
+    .myForm input,
+    .myForm select {
+        flex: 6;
+        padding: .5em;
+        margin-bottom: 1em;
+        height: 2rem;
+    }
+    .myForm button {
+        padding: 1em;
+        background: linear-gradient(40deg, rgba(111, 155, 156, 0.459) 0%, rgba(207, 162, 233, 0.8) 100%);
+        color: white;
+        border: 0;
+        transition-duration: 700ms;
+    }
+    .myForm button:hover {
+        transform: scale(1.02);
+        transition-duration: 400ms;
+    }
+    .myForm fieldset {
+        border: 0;
+    }
+    .payment>label,
+    .extras>label {
+        display: block;
+    }
+}
+
+
 /* FOOTER */
 
-.footer {
+footer {
     text-align: center;
     padding: 1rem;
     overflow: hidden;
     min-height: 20rem;
-    background-color: #141414cc;
+    background: #000000ee;
     margin-top: 5rem;
     color: #eee;
 }
 
-.footer ul {
+footer ul {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
@@ -257,19 +588,15 @@ button {
     justify-content: center;
 }
 
-.footer li {
+footer li {
     padding: 2rem;
 }
 
-.footer h3 {
-    padding-top: 10rem;
+footer h4 {
+    padding: 2rem;
     margin: 0 auto;
 }
 
-.footer h2 {
-    padding: 2rem;
-}
-
-.footer a:hover {
+footer a:hover {
     color: #bbbbbbbb;
 }
