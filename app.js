@@ -1,6 +1,7 @@
 // Imports
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
+const mysql = require("mysql");
 
 const app = express();
 const port = 5000;
