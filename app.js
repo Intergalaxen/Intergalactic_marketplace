@@ -6,6 +6,12 @@ const mysql = require("mysql");
 const app = express();
 const port = 5000;
 
+let connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "toor",
+});
+
 // Static Files
 app.use(express.static("public"));
 app.use("/css", express.static(__dirname + "public/css"));
