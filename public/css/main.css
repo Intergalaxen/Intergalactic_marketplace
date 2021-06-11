@@ -18,13 +18,16 @@ li {
 
 /* HOMEPAGE */
 
+
+/* header section */
+
 h1 {
     color: black;
     text-align: center;
     margin-top: 5rem;
     font-size: 2em;
     letter-spacing: 0.2rem;
-    text-shadow: -0.3rem -0.2rem 1rem #141414;
+    text-shadow: 0.1rem 0.1rem 0.7rem #141414cc;
 }
 
 h2 {
@@ -256,6 +259,12 @@ button {
 
 
 /* ABOUT PAGE */
+
+.header {
+    text-align: center;
+    margin: -5em auto;
+    padding-bottom: 10rem;
+}
 
 .about-page {
     background-color: #000000ee;

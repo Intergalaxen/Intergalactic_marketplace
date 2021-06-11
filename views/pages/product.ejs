@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Min fina e-shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <%- include('../partial/header.ejs') %>
+
+            <h1>
+                <%= name %>
+            </h1>
+            <div class="container">
+                <p>Pris:
+                    <%= price %> kr</p>
+                <div>
+                    <img src="<%= img_url %>">
+                </div>
+            </div>
+            <button onclick="buy( <%= id %> )">Köp!</button></div>
+    <script src="js/cookies.js"></script>
+    <script src="js/product.js"></script>
+</body>
+
+</html>
