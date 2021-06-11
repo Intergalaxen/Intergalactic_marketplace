@@ -72,9 +72,9 @@ app.set("layout", "./layouts/full-width");
 app.set("view engine", "ejs");
 
 // Routes
-app.get("", (req, res) => {
+app.get("/", (req, res) => {
     allSupplies((error, result) => {
-        res.render("index", { title: "Home Page" }, { supplies: result });
+        res.render("index", { title: "Home Page", supplies: result });
     });
 });
 
@@ -94,10 +94,6 @@ app.get("/contact", (req, res) => {
     res.render("contact", { title: "Contact us" });
 });
 
-app.get("/checkout", (req, res) => {
-    res.render("checkout", { title: "Checkout" });
-});
-
 app.get("/product", (req, res) => {
     // Produktsida
     let productid = req.query.id;
@@ -107,11 +103,11 @@ app.get("/product", (req, res) => {
         let name = result.name;
         let price = result.price;
         let img_url = result.img_url;
-        res.render("pages/product", { name, price, id, img_url });
+        res.render("pages/product", { name, price, id, img_url, title: name });
     });
 });
 
-app.get("/mycart", (req, res) => {
+app.get("/cart", (req, res) => {
     // Varukorg
     let cart = carts[req.query.user];
     if (!cart) {
@@ -135,6 +131,10 @@ app.get("/mycart", (req, res) => {
         }
         res.render("pages/cart", { totalprice });
     });
+});
+
+app.get("/checkout", (req, res) => {
+    res.render("checkout", { title: "Checkout" });
 });
 
 app.get("/newuser", (req, res) => {
