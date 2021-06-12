@@ -103,7 +103,7 @@ app.get("/product", (req, res) => {
         let name = result.name;
         let price = result.price;
         let img_url = result.img_url;
-        res.render("pages/product", { name, price, id, img_url, title: name });
+        res.render("product", { name, price, id, img_url, title: name });
     });
 });
 
@@ -129,7 +129,7 @@ app.get("/cart", (req, res) => {
         for (let detaljer of result) {
             totalprice += detaljer.price * occurances[detaljer.id];
         }
-        res.render("pages/cart", { totalprice });
+        res.render("cart", { totalprice });
     });
 });
 

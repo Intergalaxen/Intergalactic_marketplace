@@ -382,6 +382,13 @@ ul.icons li .icon:before {
 }
 
 
+/* PRODUCT PAGE */
+
+.container {
+    padding: 2rem;
+}
+
+
 /* CHECKOUT PAGE */
 
 .order-details {
