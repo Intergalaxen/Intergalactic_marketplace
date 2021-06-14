@@ -93,17 +93,17 @@
         </div>
     </div>
     <div class="featured-products-grid">
-        <h3>supplies:</h3>
-
         <% supplies.forEach(function(vara) { %>
             <a href="/product?id=<%= vara.id %>">
                 <div class="featured-product-item">
 
-                    <div style="background-image: url(' <%= vara.img_url %> ');" class="featured-product-item-image"></div>
+                    <div class="featured-product-item-image" style="background-image: url('<%= vara.img_url %>');"></div>
                     <p class="title">
                         <%= vara.name %>
                     </p>
-                    <p class="description">A super fast drone with a long living batterytime</p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, alias, sunt in quo sed officia eveniet repellat fugia!
+                    </p>
                     <p class="price">
                         <%= vara.price %> BTC</p>
                     <button>View item</button>
@@ -134,28 +134,7 @@
                         <button>View item</button>
                     </div>
                     <div class="featured-product-item">
-                        <div style="background-image: url('images/products/marketplace-pic05.jpg');" class="featured-product-item-image"></div>
-                        <p class="title">Drone</p>
-                        <p class="description">A super fast drone with a long living batterytime</p>
-                        <p class="price">7 BTC</p>
-                        <button>View item</button>
-                    </div>
-                    <div class="featured-product-item">
-                        <div style="background-image: url('images/products/marketplace-pic06.jpg');" class="featured-product-item-image"></div>
-                        <p class="title">Drone</p>
-                        <p class="description">A super fast drone with a long living batterytime</p>
-                        <p class="price">7 BTC</p>
-                        <button>View item</button>
-                    </div>
-                    <div class="featured-product-item">
                         <div style="background-image: url('images/products/marketplace-pic07.jpg');" class="featured-product-item-image"></div>
-                        <p class="title">Drone</p>
-                        <p class="description">A super fast drone with a long living batterytime</p>
-                        <p class="price">7 BTC</p>
-                        <button>View item</button>
-                    </div>
-                    <div class="featured-product-item">
-                        <div style="background-image: url('images/products/marketplace-pic08.jpg');" class="featured-product-item-image"></div>
                         <p class="title">Drone</p>
                         <p class="description">A super fast drone with a long living batterytime</p>
                         <p class="price">7 BTC</p>

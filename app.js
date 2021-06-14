@@ -42,7 +42,7 @@ function guid() {
 
 function allSupplies(callback) {
     // Tar fram id och namn för alla supplies
-    connection.query("SELECT id, name FROM dbo.products;", callback);
+    connection.query("SELECT id, name, img_url FROM dbo.products;", callback);
 }
 
 function productWithId(id, callback) {

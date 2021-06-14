@@ -164,6 +164,7 @@ h2 {
     text-align: center;
     box-sizing: border-box;
     background: #eee;
+    max-width: 300px;
 }
 
 .featured-product-item-image {
